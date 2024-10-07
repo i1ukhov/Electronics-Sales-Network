@@ -16,7 +16,7 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class RetailSerializer(serializers.ModelSerializer):
+class NetworkSerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)
     plant = PlantSerializer(read_only=True)
 
@@ -25,7 +25,7 @@ class RetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class IndividualSerializer(serializers.ModelSerializer):
+class EntrepreneurSerializer(serializers.ModelSerializer):
     plant = PlantSerializer(read_only=True)
     product = ProductSerializer(read_only=True)
 
